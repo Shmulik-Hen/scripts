@@ -1,0 +1,10 @@
+alias ll='ls -l'
+alias lla='ls -la'
+alias llt='ls -latr'
+alias l1='ls -1'
+# global find
+alias gf='find . -path "*/.git" -prune -o -type f -print0 | xargs -0 grep -I -n'
+alias igf='find . -path "*/.git" -prune -o -type f -print0 | xargs -0 grep -I -n -i'
+# delete special chars
+alias dsc='sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"'
+alias tmux='tmux attach'

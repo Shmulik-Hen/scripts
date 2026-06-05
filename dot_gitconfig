@@ -1,0 +1,49 @@
+[user]
+	email = shmulik.hen@gmail.com
+	name = Shmulik Hen
+[author]
+	name = Shmulik Hen
+	email = shmulik.hen@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[color]
+	ui = auto
+[branch]
+     	autosetuprebase = always
+[pull]
+	rebase = true
+[safe]
+	directory = /mnt/backup_drive_2T/part2/GIT_BACKUP/home.git
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[alias]
+
+st = status
+# example "git st"
+
+l = !git log --pretty=format:'%w(120,0,41)%C(yellow)%h %C(bold white) %cd %Cblue %an      %Creset\t %s' --date=short -20
+lh = !git log --pretty=format:'%w(200,0,41)%C(yellow)%h %C(bold white) %cd %Cblue %an      %C(yellow)\t%d%Creset %s' --date=short -20
+lt = !git log --pretty=format:'%w(120,0,49)%C(yellow)%h %C(bold white) %cd\b\b\b\b\b %Cblue %an      %Creset\t %s' --date=iso8601 -20
+     
+# example "git l"
+# example "git l -100"
+# example "git l -20"
+
+view = "!f() { git show --name-status $1; }; f"
+# example "git view 8c8c1b5"
+
+cview = "!f() { git diff $1^ $1 $2; }; f"
+# example "git cview 8c8c1b5 filename"
+
+dview = "!f() { git difftool --dir-diff $1^ $1; }; f"
+# example "git dview 8c8c1b5"
+
+difolder ="!f() { git difftool --dir-diff --no-symlinks $1; }; f"
+# example "git difolder rf"
+
