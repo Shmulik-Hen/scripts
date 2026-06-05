@@ -1,0 +1,2 @@
+tar cf - -C config/targets/amazon/ . --exclude=*dotconfig --exclude=.svn | tar xf -
+
